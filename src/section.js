@@ -2,6 +2,7 @@ import "./styles.css";
 import NoImg from "./NoImg.jpg";
 function Section({ search, url }) {
   const urls = url;
+  console.log(urls);
   const onErrorImg = (e) => {
     e.target.src = NoImg;
   };
@@ -17,6 +18,7 @@ function Section({ search, url }) {
           <div className="section-line"></div>
         </li>
         {urls &&
+          search &&
           urls.map(({ url, width, height }, i) => {
             try {
               return (
